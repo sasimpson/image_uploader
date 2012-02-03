@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+		<title>image uploader</title>
+		<style type="text/css">
+			body {
+				padding-top: 60px;
+			}
+			.main {
+				border-radius: 10px;
+				padding: 10px;
+			}
+			dt.working {
+				display: none;
+			}
+
+	    </style>
+	</head>
+	<body>
+		<div class="topbar">
+		      <div class="fill">
+		        <div class="container">
+		          <a class="brand" href="/">Image Uploader</a>
+		          <ul class="nav">
+		            <li><a href="/">Home</a></li>
+		            <li><a href="/list">List</a></li>
+		            <li><a href="/new">New</a></li>
+		            <li><a href="/help">Help</a></li>
+		          </ul>
+		        </div>
+		      </div>
+		    </div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="span16">
+					{% block content %}{% endblock %}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

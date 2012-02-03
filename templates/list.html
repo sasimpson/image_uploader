@@ -1,0 +1,27 @@
+		{% extends "base.html" %}
+		{% block content %}
+			<h3>your images</h3>
+			<p/>
+			{% if prev is defined %}
+			<a href="/list?marker={{prev}}">prev</a>
+			{% endif %}
+			
+			{% if next is defined %}
+		 	<a href="/list?marker={{next}}">next</a>
+			{% endif %}
+			<dl>
+				{% for image in images %}
+					{% if image.content_type == 'image/jpeg' or image.content_type == 'image/gif' or image.content_type == 'image/png' %}
+					<dt><span class="label notice"><a href="{{cname}}/{{image.name}}">CDN</a></span> <a href="{{image.public_uri()}}">{{image.name}}</a></dt>
+					<dd>{{"%.2f" | format(image.size/1024)}}kB</dd>
+					{% endif %}
+				{% endfor %}
+			</dl>
+			{% if prev is defined %}
+			<a href="/list?marker={{prev}}">prev</a>
+			{% endif %}
+			
+			{% if next is defined %}
+		 	<a href="/list?marker={{next}}">next</a>
+			{% endif %}
+		{% endblock %}
