@@ -36,5 +36,6 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
+.coverage
 *.tmproj
 env/*
