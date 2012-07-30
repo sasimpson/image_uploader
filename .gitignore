@@ -39,3 +39,4 @@ Thumbs.db
 .coverage
 *.tmproj
 env/*
+*.cfg

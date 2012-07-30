@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+        <form action="/login?next={{next}}" method="POST">
+            <label name="email" value="email" for="email">Email</label>
+                <input type="text" name="email"/><br/>
+            <label name="password" value="password">Password</label>
+                <input type="password" name="password"/><br/>
+            <label name="rememberme" value="rememberme" class="checkbox">remember login
+                <input type="checkbox" name="rememberme" value="1"/>
+            </label>
+            <input type="submit" name="submit" value="submit" class="btn btn-success"/>
+        </form>
+
+        
+
+{% endblock %}
