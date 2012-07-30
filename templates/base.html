@@ -33,6 +33,11 @@
 		            <li><a href="/list">List</a></li>
 		            <li><a href="/new">New</a></li>
 		            <li><a href="/help">Help</a></li>
+		            {% if current_user.is_authenticated() %}
+		            <li><a href="/logout">Logout</a></li>
+		            {% else %}
+		            <li><a href="/login">Login</a></li>
+		            {% endif %}
 		          </ul>
 		        </div>
 		      </div>
